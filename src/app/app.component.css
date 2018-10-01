@@ -1,0 +1,21 @@
+.mat-toolbar, .mat-progress-bar {
+  box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.5);
+}
+
+.content-wrapper {
+  margin: auto;
+  width: 60%;
+}
+
+@media (max-width: 1000px) {
+  .content-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-wrapper {
+    width: 95%;
+  }
+}
+
