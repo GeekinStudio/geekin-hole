@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MaterialModule} from './material/material.module';
-import {HomeComponent} from './home/home.component';
+import {HomeComponent, SheetComponent} from './home/home.component';
 import {AppRouting} from './app.routing';
 import {ErrComponent} from './err/err.component';
 import {LoginErrDialogComponent, LoginComponent} from './login/login.component';
@@ -22,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     LoginErrDialogComponent,
     RegisterComponent,
-    RegisterErrDialogComponent
+    RegisterErrDialogComponent,
+    SheetComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import {HttpClientModule} from '@angular/common/http';
   bootstrap: [AppComponent],
   entryComponents: [
     LoginErrDialogComponent,
-    RegisterErrDialogComponent
+    RegisterErrDialogComponent,
+    SheetComponent
   ]
 })
 export class AppModule { }

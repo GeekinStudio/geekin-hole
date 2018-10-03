@@ -24,9 +24,8 @@
 #dash {
   z-index: 1;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 200px;
+  bottom: 32px;
+  right: 32px;
   border-radius: 28px 0;
 }
 
@@ -40,5 +39,9 @@
 }
 
 .cards {
-  margin: 20px;
+  margin: 24px;
+}
+
+.group {
+  margin: 8px;
 }

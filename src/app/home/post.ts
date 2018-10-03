@@ -6,6 +6,7 @@ export class Post {
         public pic = '',
         public bio = '',
         public up = 0,
-        public down = 0
+        public down = 0,
+        public createtime?: Date
     ) {}
 }
