@@ -1,5 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {User} from 'leancloud-storage';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,18 +9,25 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog, private router: Router) {
   }
 
   public input = {
     username: '',
     pwd: ''
   };
-  public lg = function () {
+  async lg() {
     console.log(this.input);
-    if (this.input.username === '' || this.input.pwd === '') {
-      this.dialog.open(ErrDialogComponent);
+    try {
+      const result = await User.logIn(this.input.username, this.input.pwd);
+      console.log(result);
+    } catch (e) {
+      console.log(e);
+      errmsg = e.toString();
+      this.dialog.open(LoginErrDialogComponent);
+      return;
     }
+    this.router.navigateByUrl('/Home');
   };
 
 
@@ -27,15 +36,19 @@ export class LoginComponent implements OnInit {
 
 }
 
+let errmsg = '';
+
 @Component({
   selector: 'app-err-dialog',
-  template: '<p style="text-align: center;">请完整填写表单</p><button mat-button (click)="onClose();">关闭</button>'
+  template: '<p style="text-align: center;">{{msg}}</p>' +
+            '<p style="float: right;"><button mat-button (click)="onClose();">关闭</button></p>'
 })
-export class ErrDialogComponent {
-  constructor(public dialogRef: MatDialogRef<ErrDialogComponent>) {
+export class LoginErrDialogComponent {
+  constructor(public dialogRef: MatDialogRef<LoginErrDialogComponent>) {
   }
+  msg = errmsg;
 
-  public onClose = function () {
+  public onClose() {
     this.dialogRef.close();
-  };
+  }
 }

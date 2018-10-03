@@ -1,0 +1,44 @@
+#fab {
+  z-index: 1;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+#closefab {
+  z-index: 1;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;/*
+  background: transparent;
+  box-shadow: none !important;*/
+  width: 56px;
+  height: 56px;
+}
+
+#closeicon {
+  z-index: 1;
+  color: black;
+}
+
+#dash {
+  z-index: 1;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 200px;
+  border-radius: 28px 0;
+}
+
+#mainContent {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.mat-card-content {
+  font-size: 18px;
+}
+
+.cards {
+  margin: 20px;
+}

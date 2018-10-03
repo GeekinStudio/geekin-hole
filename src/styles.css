@@ -46,4 +46,5 @@ body {
   background: transparent !important;
   border: transparent !important;
   fill: transparent !important;
+  visibility: hidden !important;
 }

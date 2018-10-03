@@ -1,5 +1,9 @@
 <mat-progress-bar mode="indeterminate" color="primary" *ngIf="loading"></mat-progress-bar>
 <mat-progress-bar mode="determinate" color="primary" [value]='0' *ngIf="!loading" class="hide"></mat-progress-bar>
+<div id="head"></div>
 <div class="content-wrapper">
   <router-outlet></router-outlet>
+</div>
+<div id="version">
+  Insider
 </div>

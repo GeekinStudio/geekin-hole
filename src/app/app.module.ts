@@ -8,9 +8,9 @@ import {MaterialModule} from './material/material.module';
 import {HomeComponent} from './home/home.component';
 import {AppRouting} from './app.routing';
 import {ErrComponent} from './err/err.component';
-import {ErrDialogComponent, LoginComponent} from './login/login.component';
+import {LoginErrDialogComponent, LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
-import {RegisterComponent} from './register/register.component';
+import {RegisterComponent, RegisterErrDialogComponent} from './register/register.component';
 import {HttpClientModule} from '@angular/common/http';
 
 
@@ -20,8 +20,9 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     ErrComponent,
     LoginComponent,
-    ErrDialogComponent,
-    RegisterComponent
+    LoginErrDialogComponent,
+    RegisterComponent,
+    RegisterErrDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    ErrDialogComponent
+    LoginErrDialogComponent,
+    RegisterErrDialogComponent
   ]
 })
 export class AppModule { }

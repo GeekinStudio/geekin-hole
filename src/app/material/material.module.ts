@@ -5,7 +5,12 @@ import {
   MatInputModule,
   MatToolbarModule,
   MatFormFieldModule,
-  MatDialogModule, MatProgressBarModule, MatSelectModule, MatOptionModule, MatSidenavModule
+  MatDialogModule,
+  MatProgressBarModule,
+  MatSelectModule,
+  MatOptionModule,
+  MatSidenavModule,
+  MatIconModule
 } from '@angular/material';
 
 const mod = [
@@ -18,7 +23,8 @@ const mod = [
   MatProgressBarModule,
   MatSelectModule,
   MatOptionModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatIconModule
 ];
 
 @NgModule({
